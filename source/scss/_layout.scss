@@ -1,0 +1,49 @@
+.cbs-menu{
+	@extend .container-fluid;
+	> .cbs-navbar{
+		background-color: $cbs-navbar-bg-color;
+		padding: .5rem 1rem;
+		display: flex;
+		margin-bottom: 50px;
+		> .cbs-navbar-brand{
+			@extend .col-3;
+			font-size: 1.3rem;
+			line-height: 2.4rem;
+			color: $cbs-navbar-brand-color;
+			&:hover{
+				color: $cbs-navbar-brand-hover-color;
+				text-decoration: none;
+				-webkit-transition: 0.3s;
+			}
+		}
+		> .cbs-navbar-nav{
+			@extend .col-9;
+			display: flex;
+			justify-content: flex-end;
+			> a{
+				padding: 0.5rem;
+				color: $cbs-navbar-nav-a-color;
+				-webkit-transition: 0.3s;
+				&:hover{
+					background-color: $cbs-navbar-nav-hover-bg-color;
+					color: $cbs-navbar-nav-hover-a-color;
+					text-decoration: none;
+					-webkit-transition: 0.3s;
+				}
+			}
+		}
+		@include navbar-custom('style1', $style1-cbs-navbar-bg-color, 
+							   $style1-cbs-navbar-brand-color,
+							   $style1-cbs-navbar-brand-hover-color,
+							   $style1-cbs-navbar-nav-a-color,
+							   $style1-cbs-navbar-nav-hover-a-color,
+							   $style1-cbs-navbar-nav-hover-bg-color);
+
+		@include navbar-custom('style2', $style2-cbs-navbar-bg-color, 
+									   $style2-cbs-navbar-brand-color,
+									   $style2-cbs-navbar-brand-hover-color,
+									   $style2-cbs-navbar-nav-a-color,
+									   $style2-cbs-navbar-nav-hover-a-color,
+									   $style2-cbs-navbar-nav-hover-bg-color);
+	}
+}
